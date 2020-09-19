@@ -1,0 +1,6 @@
+https://us-south.functions.appdomain.cloud/api/v1/web/devscheffer%40gmail.com_dev/default/action_desafio8
+
+ibmcloud wsk action create action_desafio8 --docker vnderlev/custom-py-wsk:v5 action.py --web raw
+ibmcloud wsk action get action_desafio8 --url
+
+curl -F text=foo -F audio=@audio_sample.flac https://us-south.functions.appdomain.cloud/api/v1/web/devscheffer%40gmail.com_dev/default/action_desafio8.json
